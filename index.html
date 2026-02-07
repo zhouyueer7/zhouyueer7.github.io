@@ -75,6 +75,50 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+
+            <!-- MaxRL: hover on thumbnail to show video (images/maxrl.mp4), same pattern as MotionStreamer -->
+            <tr onmouseout="maxrl_stop()" onmouseover="maxrl_start()">
+              <td style="padding:8px;width:30%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id="maxrl_image">
+                    <video width="100%" height="auto" muted autoplay loop style="object-fit: cover;">
+                      <source src="images/maxrl.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <img src="images/maxrl_teaser.png" alt="maxrl" width="100%" height="auto" style="object-fit: cover;">
+                </div>
+                <script type="text/javascript">
+                  function maxrl_start() {
+                    document.getElementById('maxrl_image').style.opacity = "1";
+                    document.querySelector('#maxrl_image video').playbackRate = 1;
+                  }
+                  function maxrl_stop() {
+                    document.getElementById('maxrl_image').style.opacity = "0";
+                    document.querySelector('#maxrl_image video').playbackRate = 1;
+                  }
+                  maxrl_stop();
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a >
+                  <span class="papertitle">Maximum Likelihood Reinforcement Learning</span>
+                </a>
+
+                <br>
+
+                
+                <a href="https://tajwarfahim.github.io/">Fahim Tajwar</a><sup>*</sup><sup>†</sup>, <a href="https://scholar.google.com/citations?user=SU6ooAQAAAAJ">Guanning Zeng</a><sup>*</sup>, <strong>Yueer Zhou</strong>, <a href="https://yudasong.github.io/">Yuda Song</a>, <a href="https://daman1209arora.github.io/">Daman Arora</a>,<br>
+                <a href="https://yidingjiang.github.io/">Yiding Jiang</a>, <a href="https://www.cs.cmu.edu/~schneide/">Jeff Schneider</a>, <a href="https://www.cs.cmu.edu/~rsalakhu/">Ruslan Salakhutdinov</a>, <a href="https://havenfeng.github.io/">Haiwen Feng</a>, <a href="https://azanette.com">Andrea Zanette<sup>†</sup></a>
+                <br>
+                <em>Preprint</em>, 2026
+                <br>
+                [<a href="https://arxiv.org/abs/2602.02710", target="_blank">Paper</a>] [<a href="https://zanette-labs.github.io/MaxRL/", target="_blank">Project Page</a>] [<a href="https://github.com/tajwarfahim/maxrl", target="_blank">Code</a>]
+                <p>
+                  A framework to maximize the likelihood using reinforcement learning.
+                </p>
+              </td>
+            </tr>
 
             <tr>
               <td style="padding:8px;width:30%;vertical-align:middle">
